@@ -1,5 +1,8 @@
 <?php
 
+require_once("../model/BancoDeDados.php");
+require_once("../model/Cliente.php");
+
 class ControladorCliente{
 
 

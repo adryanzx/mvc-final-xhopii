@@ -1,8 +1,10 @@
 <?php
 
 session_start();
-require "../model/BancoDeDados.php";
+require_once("../controller/Controlador.php");
 require_once("../model/Produto.php");
+require_once("../controller/ControladorCliente.php");
+require_once("../model/Cliente.php");
 
 $controlador = new Controlador();
 
@@ -32,12 +34,11 @@ if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) &&
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     
-    $this->inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
+    $controladorCliente->cadastrarCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
 
     header('Location:../view/cadastroCliente.php');
     die();
 }
-
 
 //Cadastro de Funcionário
 if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) && 
@@ -53,7 +54,7 @@ if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) &&
     $email = $_POST['inputEmailFunc'];
     $salario = $_POST['inputSalarioFunc'];
     
-    $this->inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario);
+    $controladorFuncionario->cadastrarFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario);
 
     header('Location:../view/cadastroFuncionario.php');
     die();
@@ -73,5 +74,6 @@ if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) &&
     header('Location:../view/cadastroProduto.php');
     die();
 }
+
 
 ?>

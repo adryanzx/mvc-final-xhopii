@@ -62,7 +62,12 @@ class BancoDeDados{
         $listaProdutos = mysqli_query($conexao,$consulta);
         return $listaProdutos;
     }
-
+    public function retornarFuncionarios(){
+        $conexao = $this->conectarBD();
+        $consulta = "SELECT * FROM funcionario";
+        $listaFunc = mysqli_query($conexao, $consulta);
+        return $listaFunc;
+    }
 }
 
 ?>

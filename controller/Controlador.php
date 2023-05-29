@@ -1,5 +1,10 @@
 <?php
 
+require_once("../model/BancoDeDados.php");
+require_once("../model/Funcionario.php");
+require_once("../model/Cliente.php");
+require_once("../model/Produto.php");
+
 class Controlador{
 
     //Atributo

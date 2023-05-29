@@ -1,4 +1,6 @@
 <?php
+require_once("../model/BancoDeDados.php");
+require_once("../model/Funcionario.php");
 
 class ControladorFuncionario{
 
