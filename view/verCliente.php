@@ -39,7 +39,7 @@
         <section class="conteudo-visualizar-box">
             <h1>Clientes</h1>
             <?php
-              $controlador = new Controlador();
+              $controlador = new ControladorCliente();
               echo $controlador->visualizarClientes();
             ?>
         </section>

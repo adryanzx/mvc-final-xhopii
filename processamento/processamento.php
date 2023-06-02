@@ -32,11 +32,12 @@ if(isset($_POST['inputNome']) && isset($_POST['inputSobrenome']) &&
     $email = $_POST['inputEmail'];
     $senha = $_POST['inputSenha'];
     
-    inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
+    $this->inserirCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);
 
     header('Location:../view/cadastroCliente.php');
     die();
 }
+
 
 //Cadastro de Funcionário
 if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) && 
@@ -52,7 +53,7 @@ if(isset($_POST['inputNomeFunc']) && isset($_POST['inputSobrenomeFunc']) &&
     $email = $_POST['inputEmailFunc'];
     $salario = $_POST['inputSalarioFunc'];
     
-    inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario);
+    $this->inserirFuncionario($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $salario);
 
     header('Location:../view/cadastroFuncionario.php');
     die();

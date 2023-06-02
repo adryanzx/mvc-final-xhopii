@@ -41,7 +41,7 @@
         <section class="conteudo-visualizar-box">
             <h1>Funcionários</h1>
             <?php
-            $controlador = new Controlador();
+            $controlador = new ControladorFuncionario();
             echo $controlador->visualizarFuncionario();
             ?>
         </section>
