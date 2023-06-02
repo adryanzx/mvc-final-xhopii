@@ -6,6 +6,8 @@ class ControladorCliente{
 
     private $bancoDeDados;
 
+   
+
     public function cadastrarCliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha){
 
         $cliente = new Cliente($cpf, $nome, $sobrenome, $dataNasc, $telefone, $email, $senha);

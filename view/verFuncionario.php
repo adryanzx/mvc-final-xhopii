@@ -1,6 +1,6 @@
 <?php
     
-    require "../processamento/funcoesBD.php";
+    require "../controller/ControladorFuncionario.php";
 
 ?>
 

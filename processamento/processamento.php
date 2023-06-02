@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require "funcoesBD.php";
+require "../model/BancoDeDados.php";
 require_once("../model/Produto.php");
 
 $controlador = new Controlador();

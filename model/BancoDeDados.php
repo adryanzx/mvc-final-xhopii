@@ -33,9 +33,9 @@ class BancoDeDados{
         
         $conexao = $this->conectarBD();
         $consulta = "INSERT INTO produto (nome, fabricante, descricao, valor) 
-                     VALUES ('$produto->get_Nome()',
-                             '$produto->get_Fabricante()',
-                             '$produto->get_Descricao()',
+                     VALUES ('{$produto->get_Nome()}',
+                             '{$produto->get_Fabricante()}',
+                             '{$produto->get_Descricao()}',
                              '$produto->get_Valor()')";
         mysqli_query($conexao,$consulta);
     }

@@ -54,7 +54,7 @@ class Cliente{
          $this->dataNasc = $DataNasc;
      }
      public function get_Telefone(){
-         return($this->Telefone);
+         return($this->telefone);
      }
  
      public function set_Telefone($Telefone){

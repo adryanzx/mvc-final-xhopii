@@ -1,5 +1,5 @@
 <?php
-    require "../processamento/funcoesBD.php";
+    require "../controller/ControladorCliente.php";
 ?>
 
 <!DOCTYPE html>
